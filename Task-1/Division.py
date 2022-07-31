@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+if(b==0): print('Wrong inputs')
+print(a//b)
+print(a/b)
