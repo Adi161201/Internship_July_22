@@ -1,5 +1,6 @@
-ans=""
-a='Aditya Mehrotra is a good boy'
-ans=ans.split(" ").join("-")
+s='Abcd'
+print(ord(s[0]))
 
-print(ans)
+ord(s[0])+ 32 
+
+print(ord(s[0]))
