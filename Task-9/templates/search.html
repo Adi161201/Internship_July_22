@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex101.com</title>
+  </head>
+  <body>
+    <h1 class="title">Regex101</h1>
+    <h2 class="sub-title">Welcome to the Regex101 CLONE</h2>
+
+    <form action="{{url_for('search')}}" method="post">
+      <label class="string1"> Enter String </label>
+      <input class="string-name" type="text" name="in_1" />
+      <br />
+
+      <label class="string2">Enter Regex</label>
+      <input class="regex-name" type="text" name="in_2" />
+
+      <button class="Submit-button">Submit</button>
+    </form>
+    <div class="output">
+    <p >
+    {% if b %}
+    <h1 id="match-found" >Match Found!</h1>
+    <h3>
+      Regix Pattern Entered: {{ c }} <br /><br />
+      Text String Entered: {{ d }} <br /><br />
+      Total Matches Found: {{ a }} <br /><br />
+      Matched: {{ b }}
+    </h3>
+    {% else %}
+    <h3>No Match Found!</h3>
+    <h3>
+      Regix Pattern Entered: {{ c}} <br /><br />
+      Text String Entered: {{ d }}
+    </h3>
+    {% endif %}
+    </p>
+    </div>
+
+    <style>
+      .match-found{
+        position: absolute;
+        top: 370px;
+        left: 680px;
+        color: rgb(240, 37, 37);
+
+
+      }
+      .output{
+        position: absolute;
+        top: 460px;
+        left: 680px;
+        color: white;
+        font-weight: bolder;
+        
+
+      }
+      .title {
+        color: rgb(233, 33, 33);
+        font-family: "Courier New";
+        font-weight: 900px;
+        font-size: 50px;
+        position: absolute;
+        top: 2px;
+        left: 680px;
+      }
+
+      .string1 {
+        color: rgb(0, 0, 0);
+        font-family: "Courier New";
+        font-weight: bolder;
+        font-size: 20px;
+        position: absolute;
+        top: 170px;
+        left: 530px;
+      }
+
+      .string2 {
+        color: rgb(0, 0, 0);
+        font-family: "Courier New";
+        font-weight: bolder;
+        font-size: 20px;
+        position: absolute;
+        top: 250px;
+        left: 530px;
+      }
+      body {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/004/555/741/original/abstract-fluid-design-element-minimalistic-background-for-text-wavy-bubble-banner-poster-clipart-with-lines-dots-gradient-liquid-blue-flat-shape-geometric-color-illustration-isolated-vector.jpg");
+        background-size: cover;
+      }
+
+      .sub-title {
+        color: rgb(236, 45, 45);
+        font-family: "Courier New";
+        position: absolute;
+        top: 70px;
+        left: 580px;
+      }
+
+      .string-name {
+        position: absolute;
+        top: 150px;
+        left: 700px;
+
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid rgb(23, 57, 191);
+        border-radius: 10px;
+        height: 20px;
+        width: 400px;
+      }
+
+      .regex-name {
+        position: absolute;
+        top: 230px;
+        left: 700px;
+
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid rgb(23, 57, 191);
+        border-radius: 10px;
+        height: 20px;
+        width: 400px;
+      }
+
+      .Submit-button {
+        position: absolute;
+        top: 330px;
+        left: 715px;
+
+        background-color: rgba(250, 124, 6, 0.819);
+        color: white;
+        border: none;
+        height: 35px;
+        width: 150px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: large;
+      }
+    </style>
+  </body>
+</html>
